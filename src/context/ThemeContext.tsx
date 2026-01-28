@@ -9,22 +9,37 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(() => {
+// Initialize theme before React renders to avoid flash
+const getInitialTheme = (): Theme => {
+  if (typeof window !== 'undefined') {
     const saved = localStorage.getItem('theme');
     if (saved === 'light' || saved === 'dark') {
       return saved;
     }
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  });
+  }
+  return 'light';
+};
+
+// Apply theme to document immediately
+const applyTheme = (theme: Theme) => {
+  if (theme === 'dark') {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+};
+
+// Apply initial theme immediately (before React hydration)
+const initialTheme = getInitialTheme();
+applyTheme(initialTheme);
+
+export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [theme, setTheme] = useState<Theme>(initialTheme);
 
   useEffect(() => {
     localStorage.setItem('theme', theme);
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    applyTheme(theme);
   }, [theme]);
 
   const toggleTheme = () => {
