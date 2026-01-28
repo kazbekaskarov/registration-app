@@ -1,0 +1,104 @@
+{
+  "common": {
+    "next": "Далее",
+    "back": "Назад",
+    "continue": "Продолжить",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "edit": "Редактировать",
+    "logout": "Выйти",
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "success": "Успешно"
+  },
+  "language": {
+    "ru": "Русский",
+    "en": "English"
+  },
+  "theme": {
+    "light": "Светлая тема",
+    "dark": "Тёмная тема"
+  },
+  "welcome": {
+    "title": "Добро пожаловать\nв личный кабинет\nдля бизнеса!"
+  },
+  "steps": {
+    "phone": "Ввод телефона",
+    "role": "Выбор роли",
+    "otp": "Подтверждение",
+    "profile": "Анкета",
+    "complete": "Профиль"
+  },
+  "phoneStep": {
+    "title": "Регистрация",
+    "subtitle": "Введите номер телефона для регистрации",
+    "phonePlaceholder": "+7 (___) ___-__-__",
+    "phoneLabel": "Номер телефона",
+    "termsLabel": "Согласен с условиями и обработкой персональных данных",
+    "termsLink": "условиями",
+    "phoneRequired": "Введите номер телефона",
+    "phoneInvalid": "Введите корректный номер телефона",
+    "termsRequired": "Необходимо принять условия"
+  },
+  "roleStep": {
+    "title": "Выберите роль",
+    "subtitle": "Кем вы хотите зарегистрироваться?",
+    "customer": "Заказчик",
+    "customerDescription": "Ищу перевозчиков для своих грузов",
+    "carrier": "Перевозчик",
+    "carrierDescription": "Предлагаю услуги перевозки"
+  },
+  "otpStep": {
+    "title": "Подтверждение",
+    "subtitle": "Введите код из SMS, отправленный на номер",
+    "codeLabel": "Код подтверждения",
+    "resend": "Отправить код повторно",
+    "resendIn": "Отправить повторно через",
+    "seconds": "сек.",
+    "invalidCode": "Неверный код",
+    "codeRequired": "Введите код подтверждения"
+  },
+  "profileStep": {
+    "title": "Заполните анкету",
+    "subtitle": "Введите ваши данные для завершения регистрации",
+    "lastName": "Фамилия",
+    "firstName": "Имя",
+    "middleName": "Отчество",
+    "middleNameOptional": "Отчество (необязательно)",
+    "email": "Email",
+    "password": "Пароль",
+    "passwordHint": "Минимум 8 символов, буквы и цифры",
+    "iin": "ИИН",
+    "bin": "БИН",
+    "iinHint": "Для физических лиц",
+    "binHint": "Для юридических лиц (если выбрана роль Заказчик)",
+    "lastNameRequired": "Введите фамилию",
+    "firstNameRequired": "Введите имя",
+    "emailRequired": "Введите email",
+    "emailInvalid": "Введите корректный email",
+    "passwordRequired": "Введите пароль",
+    "passwordInvalid": "Пароль должен содержать минимум 8 символов, буквы и цифры",
+    "iinRequired": "Введите ИИН/БИН",
+    "iinInvalid": "ИИН/БИН должен содержать 12 цифр"
+  },
+  "profileScreen": {
+    "title": "Ваш профиль",
+    "phone": "Телефон",
+    "role": "Роль",
+    "fullName": "ФИО",
+    "email": "Email",
+    "identificationNumber": "ИИН/БИН",
+    "editProfile": "Редактировать профиль",
+    "logoutConfirm": "Вы уверены, что хотите выйти?",
+    "logoutDescription": "Все данные регистрации будут удалены",
+    "myProfile": "Мой профиль",
+    "myOrders": "Мои заказы",
+    "notifications": "Уведомления",
+    "settings": "Настройки"
+  },
+  "validation": {
+    "required": "Это поле обязательно",
+    "minLength": "Минимум {{min}} символов",
+    "maxLength": "Максимум {{max}} символов"
+  }
+}
